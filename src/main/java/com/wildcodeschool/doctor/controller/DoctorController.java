@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class DoctorController {
 
+    @GetMapping("/")
+    public String index() {
+        return "index.html"; // you can also write return "home.html"
+    }
+
+
     @GetMapping("/doctor/{snumber}")
     @ResponseBody
     public Object doctor(@PathVariable String snumber) {
